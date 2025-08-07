@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Forms Cadastro
+{% endblock %}
+
+{% block conteudo %}
+
+
+        <div class="container" style="text-align: center;">
+            <h1>Preencha o Cadastro</h1>
+
+        <br>
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            {{  form.usuario.label()}}
+            {{form.usuario(class="form-control", placeholder="Informe o Username")}}
+
+            {{form.email.label()}}
+            {{form.email(class="form-control", placeholder="Informe seu Email")}}
+
+            {{form.senha1.label()}}
+            {{form.senha1(class="form-control", placeholder="Informe a Senha")}}
+
+            {{form.senha2.label()}}
+            {{form.senha2(class="form-control", placeholder="Confirme a Senha")}}
+
+            <br>
+            {{form.submit(class="btn btn-success")}}
+        </form>
+        </div> 
+        <br>
+            <div>
+            <h5>Voce ja possui cadastro? </h5>
+            <button class="btn btn-secondary">
+                <a href="{{url_for('page_login')}}" style="text-decoration: none; color: black;">Log In</a>
+            </button>
+
+        </div>
+
+{% endblock %}
