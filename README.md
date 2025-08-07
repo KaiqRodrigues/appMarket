@@ -7,9 +7,13 @@ A estilização é opcional, utilizei bootstrap, mesclando com style direto nos 
 
 FERRAMENTAS UTILIZADAS:
 •	wtfforms permite abstração dos formularios por meio de classes no Python permitindo tambem validação no front com o "validators"
+
 •	FlaskForm é uma classe base de form do flask_wtf - extensão flask para wtforms (um complementa o outro)
+
 •	SQLAchemy permite abstração do banco na forma de ORm
+
 •	FLASK-BCRYPT
+
 Bcrypt permite a criptografia de um valor em hash
 
 •	FLASK-LOGIN
