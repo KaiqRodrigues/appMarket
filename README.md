@@ -1,26 +1,79 @@
-Sistema web para compra e venda de produtos, com autenticação, proteção contra ataques CSRF e uso de modais dinâmicos para confirmação de transações. Registro em Banco de Dados SQLITE.
-Aplicação desenvolvida em curso na Udemy.
-No repositório, anexei um relatório que fiz ao longo do desenvolvimento, acredito que aborde os principais pontos e funcionalidades.
+Sistema Web de Compra e Venda de Produtos
 
-Para aplicação, será necessário a criação do banco e das tabelas conforme a abstração no forms.py onde existe o modelo de tabela.
-A estilização é opcional, utilizei bootstrap, mesclando com style direto nos elementos. 
+Sistema web desenvolvido em curso da Udemy, com foco em autenticação, segurança e transações dinâmicas de produtos.
 
-FERRAMENTAS UTILIZADAS:
-•	wtfforms permite abstração dos formularios por meio de classes no Python permitindo tambem validação no front com o "validators"
+O projeto utiliza Flask, SQLAlchemy e WTForms, com suporte a modais dinâmicos para confirmação de transações e proteção contra ataques CSRF.
 
-•	FlaskForm é uma classe base de form do flask_wtf - extensão flask para wtforms (um complementa o outro)
+No repositório também está incluído um relatório de desenvolvimento, detalhando funcionalidades e decisões do projeto.
 
-•	SQLAchemy permite abstração do banco na forma de ORm
+Funcionalidades Principais
 
-•	FLASK-BCRYPT
+Registro e autenticação de usuários
 
-Bcrypt permite a criptografia de um valor em hash
+Proteção contra ataques CSRF
 
-•	FLASK-LOGIN
-	Gerencia sessões
-- login_user
-- logout-user
-- login_required -> valida se esta logado para efetuar uma transação (usado em /produtos)
-  
-•	SQLITE
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mercado.db"
+Transações com confirmação via modais dinâmicos
+
+Armazenamento em Banco de Dados SQLite
+
+Validação de formulários no backend e frontend
+
+Criptografia de senhas com Bcrypt
+
+Controle de sessões de usuário (login/logout)
+
+Requisitos
+
+Antes de executar a aplicação, é necessário:
+
+Criar o banco de dados e as tabelas conforme abstração definida em forms.py.
+
+Instalar dependências do projeto:
+
+pip install -r requirements.txt
+
+Rodar a aplicação:
+
+python app.py
+Estrutura do Projeto
+
+app.py – Arquivo principal da aplicação Flask
+
+forms.py – Abstração dos formulários e modelos de tabelas
+
+templates/ – Arquivos HTML, podendo usar Bootstrap ou estilos diretos
+
+static/ – CSS, JS e assets opcionais
+
+relatorio.pdf – Relatório de desenvolvimento e funcionalidades
+
+Ferramentas e Tecnologias Utilizadas
+Formulários
+
+WTForms: Abstração de formulários em classes Python, com validação
+
+FlaskForm: Classe base do Flask-WTF, que integra Flask e WTForms
+
+Banco de Dados
+
+SQLAlchemy: ORM para abstração do banco de dados
+
+SQLite: Banco de dados local (app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mercado.db")
+
+Segurança
+
+Flask-Bcrypt: Hash de senhas e valores sensíveis
+
+Flask-Login: Gerenciamento de sessões e autenticação
+
+login_user – Loga usuário
+
+logout_user – Desloga usuário
+
+login_required – Valida acesso a rotas protegidas (ex.: /produtos)
+
+Frontend
+
+Bootstrap – Framework CSS para estilização rápida
+
+Estilos diretos – Possível mesclar com Bootstrap conforme necessidade
