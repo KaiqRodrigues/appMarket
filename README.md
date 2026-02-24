@@ -14,13 +14,18 @@ No repositório também está incluído um relatório de desenvolvimento, detalh
 -	Criptografia de senhas com Bcrypt
 -	Controle de sessões de usuário (login/logout)
 ________________________________________
-## Requisitos
-Antes de executar a aplicação, é necessário:
-1.	Criar o banco de dados e as tabelas conforme abstração definida em forms.py.
-2.	Instalar dependências do projeto:
-pip install -r requirements.txt
-3.	Rodar a aplicação:
-python app.py
+## Requisitos - ATENÇÃO
+(Como funciona hoje)
+
+### Banco e tabelas:
+- O projeto define os models (User, Produto, etc.) no forms.py ou em model.py.
+- Mas os dados iniciais não são populados automaticamente. Então, alguém que baixar o projeto terá tabelas vazias.
+### Inserção manual
+- Atualmente, os produtos, usuários e compras precisam ser inseridos manualmente, seja pelo SQLite Browser ou via script.
+- Não há um “painel administrativo” para adicionar produtos direto pela aplicação.
+### Execução do app:
+- Depois de criar o banco e as tabelas, instalar dependências e rodar flask --app mercado --debug run, a aplicação funciona normalmente, mas só com o que você inserir manualmente.
+
 ________________________________________
 ## Estrutura do Projeto
 - app.py – Arquivo principal da aplicação Flask
